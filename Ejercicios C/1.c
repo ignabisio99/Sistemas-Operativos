@@ -5,13 +5,13 @@
 
 char* string_concat( const char* palabra1, const char* palabra2)
 {
-    char saludo[50];
-    strcpy(saludo,palabra1);
-    strcat(saludo,palabra2);
+    
+    int longitud = strlen(palabra1) + strlen(palabra2);
 
-    char* combinacion = (char*)malloc(strlen(saludo)+1*sizeof(char));
+    char* combinacion = (char*)malloc(longitud+1*sizeof(char));
 
-    strcpy(combinacion,saludo);
+    strcpy(combinacion,palabra1);
+    strcat(combinacion,palabra2);
 
     return combinacion; 
     
